@@ -90,5 +90,6 @@ func (list *ArrayList) Clear() {
 
 func (list *ArrayList) Delete(index int) error {
 	list.dataStore = append(list.dataStore[:index], list.dataStore[index+1:]...)
+	list.TheSize--
 	return nil
 }
