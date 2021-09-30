@@ -46,5 +46,5 @@ func (it *ArrayListIterator) Remove() {
 }
 
 func (it *ArrayListIterator) GetIndex() int {
-	return it.CurrentIndeudo
+	return it.CurrentIndex
 }

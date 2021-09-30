@@ -4,8 +4,10 @@ import (
 	"fmt"
 
 	"example.com/m/ArrayList"
+	"example.com/m/StackArray.go"
 )
 
+// ArrayList
 func main1() {
 	var list ArrayList.List = ArrayList.NewArrayList()
 	list.Append(1)
@@ -26,7 +28,7 @@ func main2() {
 	}
 
 }
-func main() {
+func main3() {
 	var list ArrayList.List = ArrayList.NewArrayList()
 	list.Append("1")
 	list.Append("2")
@@ -43,4 +45,54 @@ func main() {
 		fmt.Println(item)
 	}
 	fmt.Println(list)
+}
+
+//StackArray
+func main4() {
+	mystack := StackArray.NewStack()
+	mystack.Push(1)
+	mystack.Push(2)
+	mystack.Push(3)
+	mystack.Push(4)
+	mystack.Push(5)
+	fmt.Println(mystack.Pop())
+	fmt.Println(mystack.Pop())
+	fmt.Println(mystack.Pop())
+	fmt.Println(mystack.Pop())
+	fmt.Println(mystack.Pop())
+}
+
+// ArrayListStack
+func main5() {
+	mystack := ArrayList.NewArrayListStack()
+	mystack.Push(1)
+	mystack.Push(2)
+	mystack.Push(3)
+	mystack.Push(4)
+	mystack.Push(5)
+	fmt.Println(mystack.Pop())
+	fmt.Println(mystack.Pop())
+	fmt.Println(mystack.Pop())
+	fmt.Println(mystack.Pop())
+	fmt.Println(mystack.Pop())
+}
+
+// ArrayListStackIterator
+func main() {
+	mystack := ArrayList.NewArrayListStackX()
+	mystack.Push(1)
+	mystack.Push(2)
+	mystack.Push(3)
+	mystack.Push(4)
+	mystack.Push(5)
+
+	for it := mystack.Myit; it.HasNext(); {
+		item, _ := it.Next()
+		if item == 4 {
+			fmt.Println(item)
+			break
+		}
+		//fmt.Println(item)
+	}
+
 }
