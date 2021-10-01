@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"example.com/m/ArrayList"
+	"example.com/m/Quene"
 	"example.com/m/StackArray.go"
 )
 
@@ -95,4 +96,20 @@ func main6() {
 		//fmt.Println(item)
 	}
 
+}
+
+// Quene 隊列
+//隊列是廣度遍歷
+//棧 Stack,遞迴 是深度遍歷
+func main7() {
+	myQuene := Quene.NewQuene()
+	myQuene.EnQueue(1)
+	myQuene.EnQueue(2)
+	myQuene.EnQueue(3)
+	myQuene.EnQueue(4)
+	fmt.Println(myQuene.DeQueue())
+	fmt.Println(myQuene.DeQueue())
+	fmt.Println(myQuene.DeQueue())
+	fmt.Println(myQuene.DeQueue())
+	fmt.Println(myQuene.DeQueue())
 }

@@ -47,4 +47,4 @@ func main1b() {
 }
 
 //求深度
-func main() {}
+func main2b() {}

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
+	"example.com/m/Quene"
 	"example.com/m/StackArray.go"
 )
 
@@ -21,7 +22,7 @@ func GetAll(path string, files []string) ([]string, error) {
 			fulldir := path + "/" + fi.Name()
 			fmt.Println(fi.Name())
 			files = append(files, fulldir)
-			files, _ = GetAll(path, files)
+			files, _ = GetAll(fulldir, files)
 		} else {
 			fulldir := path + "/" + fi.Name()
 			files = append(files, fulldir)
@@ -66,4 +67,40 @@ func main2a() {
 	for i := 0; i < len(files); i++ {
 		fmt.Println(files[i])
 	}
+}
+
+//Quenes
+func main() {
+	path := "/home/lj/GolandProjects"
+	files := []string{}
+	myQuene := Quene.NewQuene()
+	myQuene.EnQueue(path)
+
+	for { //死循環
+		path := myQuene.DeQueue() //不斷從隊列中取出數據
+		if path == nil {
+			break
+		}
+		read, _ := ioutil.ReadDir(path.(string))
+		for _, file := range read {
+			if file.IsDir() {
+				fulldir := path.(string) + "/" + file.Name()
+				myQuene.EnQueue(fulldir)
+				fmt.Println("Dir: ", fulldir)
+			} else {
+				fulldir := path.(string) + "/" + file.Name()
+				files = append(files, fulldir)
+
+				fmt.Println("File: ", fulldir)
+			}
+		}
+
+	}
+
+	//打印
+	/*
+		for i := 0; i < len(files); i++ {
+			fmt.Println(files[i])
+		}
+	*/
 }
