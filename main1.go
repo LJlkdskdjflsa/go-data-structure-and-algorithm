@@ -78,7 +78,7 @@ func main5() {
 }
 
 // ArrayListStackIterator
-func main() {
+func main6() {
 	mystack := ArrayList.NewArrayListStackX()
 	mystack.Push(1)
 	mystack.Push(2)
