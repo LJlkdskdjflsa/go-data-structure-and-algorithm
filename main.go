@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"example.com/m/ArrayList"
+	"example.com/m/CircleQuene"
 	"example.com/m/Quene"
 	"example.com/m/StackArray.go"
 )
@@ -112,4 +113,23 @@ func main7() {
 	fmt.Println(myQuene.DeQueue())
 	fmt.Println(myQuene.DeQueue())
 	fmt.Println(myQuene.DeQueue())
+}
+
+//CircleQuene
+/*
+循環隊列,環狀結構
+不需要數組移動,效率較高
+*/
+func main() {
+	var myCircleQuene CircleQuene.CircleQuene
+	CircleQuene.InitQueue(&myCircleQuene)
+	CircleQuene.EnQueue(&myCircleQuene, 1)
+	CircleQuene.EnQueue(&myCircleQuene, 2)
+	CircleQuene.EnQueue(&myCircleQuene, 3)
+	CircleQuene.EnQueue(&myCircleQuene, 4)
+	fmt.Println(CircleQuene.DeQueue(&myCircleQuene))
+	fmt.Println(CircleQuene.DeQueue(&myCircleQuene))
+	fmt.Println(CircleQuene.DeQueue(&myCircleQuene))
+	fmt.Println(CircleQuene.DeQueue(&myCircleQuene))
+	fmt.Println(CircleQuene.DeQueue(&myCircleQuene))
 }

@@ -70,7 +70,7 @@ func main2a() {
 }
 
 //Quenes
-func main() {
+func main3a() {
 	path := "/home/lj/GolandProjects"
 	files := []string{}
 	myQuene := Quene.NewQuene()
