@@ -6,3 +6,6 @@
 隊列
 4. CircleQuene
 循環隊列
+5. Link 鏈式結構
+LinkStack
+LinkQuene

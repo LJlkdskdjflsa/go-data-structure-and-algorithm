@@ -5,6 +5,7 @@ import (
 
 	"example.com/m/ArrayList"
 	"example.com/m/CircleQuene"
+	"example.com/m/Link"
 	"example.com/m/Quene"
 	"example.com/m/StackArray.go"
 )
@@ -120,7 +121,7 @@ func main7() {
 循環隊列,環狀結構
 不需要數組移動,效率較高
 */
-func main() {
+func main8() {
 	var myCircleQuene CircleQuene.CircleQuene
 	CircleQuene.InitQueue(&myCircleQuene)
 	CircleQuene.EnQueue(&myCircleQuene, 1)
@@ -132,4 +133,36 @@ func main() {
 	fmt.Println(CircleQuene.DeQueue(&myCircleQuene))
 	fmt.Println(CircleQuene.DeQueue(&myCircleQuene))
 	fmt.Println(CircleQuene.DeQueue(&myCircleQuene))
+}
+
+//Link
+
+func main9() {
+	node1 := new(Link.Node)
+	node2 := new(Link.Node)
+	node3 := new(Link.Node)
+	node4 := new(Link.Node)
+	node5 := new(Link.Node)
+
+	node1.Data = 1
+	node1.PNext = node2
+	node2.Data = 2
+	node2.PNext = node3
+	node3.Data = 3
+	node3.PNext = node4
+	node4.Data = 4
+	node4.PNext = node5
+	node5.Data = 5
+	fmt.Println(node1.Data)
+}
+
+//Link Stack
+func main() {
+	mystack := Link.NewStack()
+	for i := 0; i < 1000; i++ {
+		mystack.Push(i)
+	}
+	for data := mystack.Pop(); data != nil; data = mystack.Pop() {
+		fmt.Println(data)
+	}
 }
