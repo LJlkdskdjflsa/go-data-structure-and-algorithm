@@ -157,12 +157,23 @@ func main9() {
 }
 
 //Link Stack
-func main() {
+func main10() {
 	mystack := Link.NewStack()
 	for i := 0; i < 1000; i++ {
 		mystack.Push(i)
 	}
 	for data := mystack.Pop(); data != nil; data = mystack.Pop() {
+		fmt.Println(data)
+	}
+}
+
+// Link Quene
+func main() {
+	myQueneLink := Link.NewQueneLink()
+	for i := 0; i < 100; i++ {
+		myQueneLink.EnQueue(i)
+	}
+	for data := myQueneLink.DeQueue(); data != nil; data = myQueneLink.DeQueue() {
 		fmt.Println(data)
 	}
 }

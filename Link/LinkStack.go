@@ -4,7 +4,7 @@ type Node struct {
 	Data  interface{}
 	PNext *Node
 }
-type LinkStack interface {
+type StackLink interface {
 	IsEmpty() bool
 	Push(data interface{})
 	Pop() interface{}
