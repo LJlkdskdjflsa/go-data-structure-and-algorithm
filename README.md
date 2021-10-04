@@ -15,3 +15,5 @@ LinkQuene
 Algorithm
 1. select sort
 選擇排序
+2. insert sort
+插入排序

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strings"
 
+	"example.com/m/insertSort"
 	"example.com/m/selectSort"
 )
 
@@ -27,8 +28,15 @@ func main2() {
 	fmt.Println("b" > "a")
 }
 
-func main() {
+func main3() {
 	mySlice := []string{"a", "b", "c", "d", "e", "asdf", "asdc", "bgr"}
 	//fmt.Println(selectSort.SelectSortMax(mySlice))
 	fmt.Println(selectSort.SelectSortString(mySlice))
+}
+
+// insert sort int
+func main() {
+	mySlice := []int{9, 8, 7, 6, 5, 4, 7, 6, 5}
+	fmt.Println(insertSort.InsertSort(mySlice))
+
 }
