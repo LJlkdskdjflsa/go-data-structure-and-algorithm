@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strings"
 
+	"example.com/m/bubbleSort"
 	"example.com/m/insertSort"
 	"example.com/m/selectSort"
 )
@@ -35,8 +36,15 @@ func main3() {
 }
 
 // insert sort int
-func main() {
+func main4() {
 	mySlice := []int{9, 8, 7, 6, 5, 4, 7, 6, 5}
 	fmt.Println(insertSort.InsertSort(mySlice))
+
+}
+
+// bubble sort
+func main() {
+	mySlice := []int{9, 8, 7, 6, 5, 4, 7, 6, 5}
+	fmt.Println(bubbleSort.BubbleSort(mySlice))
 
 }

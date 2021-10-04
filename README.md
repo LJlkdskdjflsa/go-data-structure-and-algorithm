@@ -17,3 +17,5 @@ Algorithm
 選擇排序
 2. insert sort
 插入排序
+3. bubble sort
+冒泡排序
