@@ -19,3 +19,5 @@ Algorithm
 插入排序
 3. bubble sort
 冒泡排序
+4. heap sort
+堆排序
