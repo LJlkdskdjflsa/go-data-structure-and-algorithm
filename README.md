@@ -13,3 +13,5 @@ LinkStack
 LinkQuene
 
 Algorithm
+1. select sort
+選擇排序
