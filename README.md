@@ -21,3 +21,5 @@ Algorithm
 冒泡排序
 4. heap sort
 堆排序
+5. quick sort
+快速排序
