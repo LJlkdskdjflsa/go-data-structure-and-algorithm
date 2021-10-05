@@ -7,6 +7,7 @@ import (
 	"example.com/m/bubbleSort"
 	"example.com/m/heapSort"
 	"example.com/m/insertSort"
+	"example.com/m/oddEvenSort"
 	"example.com/m/quickSort"
 	"example.com/m/selectSort"
 )
@@ -59,8 +60,15 @@ func main6() {
 }
 
 //quick sort
-func main() {
+func main7() {
 
 	mySlice := []int{9, 8, 7, 6, 4, 31, 7, 5823, 12, 3}
 	fmt.Println(quickSort.QuickSort(mySlice))
+}
+
+//odd even sort
+func main() {
+
+	mySlice := []int{9, 8, 7, 6, 4, 31, 7, 5823, 12, 3}
+	fmt.Println(oddEvenSort.OddEvenSort(mySlice))
 }
