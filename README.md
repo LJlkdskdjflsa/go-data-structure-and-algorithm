@@ -25,3 +25,5 @@ Algorithm
 快速排序
 6. odd even sort
 奇偶排序
+7. merge sort
+歸併排序
