@@ -11,6 +11,7 @@ import (
 	"example.com/m/oddEvenSort"
 	"example.com/m/quickSort"
 	"example.com/m/selectSort"
+	"example.com/m/shellSort"
 )
 
 // select sort int
@@ -75,8 +76,15 @@ func main8() {
 }
 
 //merge sort
-func main() {
+func main9() {
 
 	mySlice := []int{9, 8, 7, 6, 5, 4, 3, 7}
 	fmt.Println(mergeSort.MergeSort(mySlice))
+}
+
+//shell sort
+func main() {
+
+	mySlice := []int{9, 8, 7, 6, 5, 4, 3, 7}
+	fmt.Println(shellSort.ShellSort(mySlice))
 }

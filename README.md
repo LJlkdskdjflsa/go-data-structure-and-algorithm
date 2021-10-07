@@ -27,3 +27,6 @@ Algorithm
 奇偶排序
 7. merge sort
 歸併排序
+8. shell sort
+希爾排序(步長收縮排序)
+->適用於併發場合（多線程）
