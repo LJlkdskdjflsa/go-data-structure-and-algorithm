@@ -30,3 +30,5 @@ Algorithm
 8. shell sort
 希爾排序(步長收縮排序)
 ->適用於併發場合（多線程）
+9. radix sort
+桶排序

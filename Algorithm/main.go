@@ -10,6 +10,7 @@ import (
 	"example.com/m/mergeSort"
 	"example.com/m/oddEvenSort"
 	"example.com/m/quickSort"
+	"example.com/m/radixSort"
 	"example.com/m/selectSort"
 	"example.com/m/shellSort"
 )
@@ -83,8 +84,18 @@ func main9() {
 }
 
 //shell sort
-func main() {
+func main10() {
 
 	mySlice := []int{9, 8, 7, 6, 5, 4, 3, 7}
 	fmt.Println(shellSort.ShellSort(mySlice))
+}
+
+//radix sort
+func main() {
+
+	//mySlice := []int{9, 8, 7, 6, 5, 4, 3, 7, 58, 34, 73, 43, 53, 65, 7, 33, 53, 97, 43, 6, 77, 89, 66, 43, 68, 22, 15, 77, 43, 88, 57, 33, 79, 99, 22, 35, 84, 25, 74, 35, 75, 32}
+	mySlice := []int{8, 7, 6, 5, 43, 88, 57, 33, 79, 99}
+	//11 222 33
+	//91 42  123
+	fmt.Println(radixSort.RadixSort(mySlice))
 }
